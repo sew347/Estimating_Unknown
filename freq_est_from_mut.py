@@ -23,7 +23,5 @@ class frequency_estimator():
 		for i in range(n_tests):
 			b.append(min(np.random.binomial(self.n_kmers, prob, (est_n_orgs, 1))))
 		min_est = np.quantile(b,p_val)
-		print(min_est)
 		w = min_est/(self.n_kmers-min_est)
-		print(w)
 		return w

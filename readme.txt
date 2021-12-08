@@ -13,3 +13,12 @@
 4. Create a frequency_estimator object using freq_est_from_mut.py. Takes as input an all_mutations_from_dict object. Runs the linear program through lp_solver.py and computes the estimated frequency as frequency_estimator.freq_est
 
 5. mut_test_script.py runs through these steps and prints output of step 4.
+
+Example command and expected output below. In this example, the first two organisms are recovered accurately, while the last is rejected due to having a mutation rate above the threshold of 0.05.
+
+stephenwhite$ python mut_test_script.py -a 0.3 0.2 0.5 -r1 0.01 0.02 0.07 -seed 10
+
+Academic license - for non-commercial use only - expires 2022-08-11
+Using license file /Users/stephenwhite/gurobi.lic
+Recovered frequencies at 0.05 mutation threshold:
+[0.3005 0.2002 0.    ]
